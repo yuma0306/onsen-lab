@@ -1,0 +1,19 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .col {
+    display: grid;
+    justify-content: center;
+    // grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+    grid-template-columns: repeat(2, max(200px));
+    gap: #{$spaceM}px;
+    margin-top: #{$spaceS}px;
+  }
+}
+
+@include sp {
+  .col {
+
+  }
+}

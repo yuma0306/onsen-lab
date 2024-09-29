@@ -1,0 +1,16 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .box {
+    padding: 40px;
+    background-color: $white;
+    border: 1px solid $gray;
+    border-radius: 8px;
+  }
+}
+
+@include sp {
+  .box {
+  }
+}

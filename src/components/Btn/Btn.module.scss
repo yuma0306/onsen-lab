@@ -1,0 +1,31 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .btn {
+    display: grid;
+    place-content: center;
+    padding: 10px #{$spaceS}px;
+    border-radius: 100vh;
+    border-width: 2px;
+    border-style: solid;
+    font-weight: $fwBold;
+    font-size: #{$fzXXLPC}px;
+    @include hoverOpacity();
+    &--yes {
+      background-color: $green02;
+      color: $green;
+      border-color: $green;
+    }
+    &--no {
+      background-color: $red02;
+      color: $red;
+      border-color: $red;
+    }
+  }
+}
+
+@include sp {
+  .btn {
+  }
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 0,
+    "text": "趣ある温泉宿はマスト？",
+    "yes": {
+      "next": 1,
+      "result": null
+    },
+    "no": {
+      "next": null,
+      "result": null
+    }
+  },
+  {
+    "id": 1,
+    "text": "個性派湯が好き？",
+    "yes": {
+      "next": 2,
+      "result": null
+    },
+    "no": {
+      "next": null,
+      "result": null
+    }
+  },
+  {
+    "id": 2,
+    "text": "硫黄のニオイが好き",
+    "yes": {
+      "next": null,
+      "result": 0
+    },
+    "no": {
+      "next": 3,
+      "result": null
+    }
+  },
+  {
+    "id": 3,
+    "text": "日本史に興味がある？",
+    "yes": {
+      "next": null,
+      "result": 1
+    },
+    "no": {
+      "next": 7,
+      "result": 2
+    }
+  }
+]

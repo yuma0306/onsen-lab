@@ -1,0 +1,17 @@
+[
+  {
+    "id": 0,
+    "title": "草津温泉",
+    "href": "kusatsu"
+  },
+  {
+    "id": 1,
+    "title": "有馬温泉",
+    "href": "arima"
+  },
+  {
+    "id": 2,
+    "title": "伊香保温泉",
+    "href": "ikaho"
+  }
+]

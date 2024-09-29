@@ -12,7 +12,7 @@ import styles from '@/components/Bnr/Bnr.module.scss';
 export default function Bnr() {
   return (
     <>
-      <Link href="/shidan/" className={styles.bnr}>
+      <Link href="/shindan/" className={styles.bnr}>
         <Image
           src="/img/bnr-shindan.png"
           alt="あなたにピッタリの温泉は？Yes・No温泉診断"

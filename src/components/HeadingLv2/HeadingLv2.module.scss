@@ -20,7 +20,7 @@
       background-color: $primary;
     }
     & + *:not(#_) {
-      margin-top: #{$spacesM}px;
+      margin-top: #{$spaceM}px;
     }
   }
 }
