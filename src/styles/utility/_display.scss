@@ -1,0 +1,45 @@
+@use '../global/import' as *;
+
+.u-none:not(#_) {
+	display: none;
+}
+.u-none-before:not(#_) {
+	&::before {
+		content: none;
+	}
+}
+.u-none-after:not(#_) {
+	&::after {
+		content: none;
+	}
+}
+.u-block:not(#_) {
+	display: block;
+}
+.u-ib:not(#_) {
+	display: inline-block;
+}
+
+@include pc {
+  .u-block-pc:not(#_) {
+		display: block;
+	}
+	.u-ib-pc:not(#_) {
+		display: inline-block;
+	}
+  .u-none-sp:not(#_) {
+		display: none;
+	}
+}
+
+@include sp {
+	.u-block-sp:not(#_) {
+		display: block;
+	}
+	.u-ib-sp:not(#_) {
+		display: inline-block;
+	}
+	.u-none-pc:not(#_) {
+		display: none;
+	}
+}
