@@ -1,0 +1,14 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .header {
+    padding: 20px;
+    background-color: $primary02;
+  }
+}
+
+@include sp {
+  .header {
+  }
+}

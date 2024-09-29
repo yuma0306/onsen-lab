@@ -1,0 +1,16 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .logo {
+    display: inline-block;
+    @include hoverOpacity();
+  }
+}
+
+@include sp {
+  .logo {
+    display: inline-block;
+    @include hoverOpacity();
+  }
+}

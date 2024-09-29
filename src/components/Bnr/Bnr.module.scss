@@ -1,0 +1,20 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .bnr {
+    display: block;
+    width: fit-content;
+    margin-inline: auto;
+    @include hoverOpacity;
+  }
+}
+
+@include sp {
+  .bnr {
+    display: block;
+    width: fit-content;
+    margin-inline: auto;
+    @include hoverOpacity;
+  }
+}

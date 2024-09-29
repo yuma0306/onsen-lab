@@ -1,0 +1,15 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .text {
+    margin-top: hl(100px);
+    margin-bottom: hl();
+  }
+}
+
+@include sp {
+  .text {
+    margin-block: hl();
+  }
+}

@@ -1,0 +1,31 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .sc {
+    padding: 80px 0;
+    &--primary {
+      background-color: $primary;
+    }
+    &--primary02 {
+      background-color: $primary02;
+    }
+    &--gray {
+      background-color: $gray;
+    }
+  }
+}
+
+@include sp {
+  .sc {
+    &--primary {
+      background-color: $primary;
+    }
+    &--primary02 {
+      background-color: $primary02;
+    }
+    &--gray {
+      background-color: $gray;
+    }
+  }
+}
