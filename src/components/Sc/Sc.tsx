@@ -6,12 +6,20 @@ import styles from '@/components/Sc/Sc.module.scss';
 interface Props {
   children: React.ReactNode;
   bgColor?: 'primary' | 'primary02' | 'gray';
+  bottomLarge?: boolean;
+  bottomSmall?: boolean;
   addClass?: string;
 }
 
-export default function Sc({ children, addClass = '', bgColor} : Props) {
+export default function Sc({ children, addClass = '', bgColor, bottomLarge, bottomSmall} : Props) {
   if(bgColor) {
     addClass += ' ' + styles[`sc--${bgColor}`];
+  }
+  if(bottomLarge) {
+    addClass += ' ' + styles[`sc--bottomLarge`];
+  }
+  if(bottomSmall) {
+    addClass += ' ' + styles[`sc--bottomSmall`];
   }
   return (
     <>

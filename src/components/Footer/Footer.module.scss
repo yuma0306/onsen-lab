@@ -1,0 +1,30 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .footer {
+    padding: #{$spaceM}px 0;
+    &__list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: #{$spaceS}px;;
+    }
+    &__link {
+      font-size: #{$fzSPC}px;
+      text-decoration: underline;
+      @include hoverOpacity();
+    }
+    &__copy {
+      margin-top: #{$spaceSSS}px;;
+      text-align: center;
+      font-size: #{$fzSSPC}px;
+    }
+  }
+}
+
+@include sp {
+  .footer {
+
+  }
+}

@@ -1,0 +1,35 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .galleryCard {
+    display: block;
+    position: relative;
+    &__modal {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      color: $white;
+      background: rgba(0, 0, 0, 0.5);
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      scale: 0;
+      transition: $transition;
+      &--active {
+        opacity: 1;
+        visibility: visible;
+        scale: 1;
+      }
+    }
+  }
+}
+
+@include sp {
+  .gallery {
+  }
+}

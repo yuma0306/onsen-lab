@@ -1,0 +1,44 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .breadcrumb {
+    padding: #{$spaceSS}px #{$spaceS}px;
+    background-color: $primary02;
+    &__list {
+      display: flex;
+      column-gap: #{$spaceM}px;
+      max-width: #{$innerWidthPC}px;
+      margin-inline: auto;
+    }
+    &__item {
+      &:not(:last-of-type) {
+        position: relative;
+        &::after {
+          position: absolute;
+          top: 50%;
+          right: -14px;
+          translate: 100% -50%;
+          content: "";
+          display: block;
+          width: 16px;
+          height: 16px;
+          background: url(/img/icon-arrow-gray.svg) no-repeat center / contain;
+        }
+      }
+    }
+    &__link {
+      color: $primary;
+      text-decoration: underline;
+      @include hoverOpacity();
+    }
+    &__text {
+
+    }
+  }
+}
+
+@include sp {
+  .breadcrumb {
+  }
+}

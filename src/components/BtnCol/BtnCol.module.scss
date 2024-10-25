@@ -2,7 +2,7 @@
 @use '../../styles/config/import' as *;
 
 @include pc {
-  .col {
+  .btnCol {
     display: grid;
     justify-content: center;
     // grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
@@ -13,7 +13,7 @@
 }
 
 @include sp {
-  .col {
+  .btnCol {
 
   }
 }

@@ -1,17 +1,37 @@
 [
   {
     "id": 0,
-    "title": "草津温泉",
-    "href": "kusatsu"
+    "name": "草津温泉",
+    "slug": "kusatsu"
   },
   {
     "id": 1,
-    "title": "有馬温泉",
-    "href": "arima"
+    "name": "有馬温泉",
+    "slug": "arima"
   },
   {
     "id": 2,
-    "title": "伊香保温泉",
-    "href": "ikaho"
+    "name": "伊香保温泉",
+    "slug": "ikaho"
+  },
+  {
+    "id": 3,
+    "name": "城崎温泉",
+    "slug": "kinosaki"
+  },
+  {
+    "id": 4,
+    "name": "銀山温泉",
+    "slug": "ginzan"
+  },
+  {
+    "id": 5,
+    "name": "黒川温泉",
+    "slug": "kurokawa"
+  },
+  {
+    "id": 6,
+    "name": "下呂温泉",
+    "slug": "gero"
   }
 ]

@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "text": "趣ある温泉宿はマスト？",
+    "text": "温泉街を散策したい？",
     "yes": {
       "next": 1,
       "result": null
@@ -19,13 +19,13 @@
       "result": null
     },
     "no": {
-      "next": null,
+      "next": 4,
       "result": null
     }
   },
   {
     "id": 2,
-    "text": "硫黄のニオイが好き",
+    "text": "硫黄のニオイが好き？",
     "yes": {
       "next": null,
       "result": 0
@@ -37,14 +37,50 @@
   },
   {
     "id": 3,
-    "text": "日本史に興味がある？",
+    "text": "温泉のためなら、階段を登るのは苦にならない",
     "yes": {
       "next": null,
-      "result": 1
+      "result": 2
     },
     "no": {
-      "next": 7,
-      "result": 2
+      "next": null,
+      "result": 1
+    }
+  },
+  {
+    "id": 4,
+    "text": "海鮮料理が好き？",
+    "yes": {
+      "next": null,
+      "result": 3
+    },
+    "no": {
+      "next": 5,
+      "result": null
+    }
+  },
+  {
+    "id": 5,
+    "text": "大正ロマンな雰囲気が好き？",
+    "yes": {
+      "next": null,
+      "result": 4
+    },
+    "no": {
+      "next": 6,
+      "result": null
+    }
+  },
+  {
+    "id": 6,
+    "text": "複数の温泉を巡る「湯めぐり」に興味がある？",
+    "yes": {
+      "next": null,
+      "result": 5
+    },
+    "no": {
+      "next": null,
+      "result": 6
     }
   }
 ]

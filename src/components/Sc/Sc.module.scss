@@ -3,7 +3,7 @@
 
 @include pc {
   .sc {
-    padding: 80px #{$spaceS}px;
+    padding: #{$spaceLL}px #{$spaceS}px;
     &--primary {
       background-color: $primary;
     }
@@ -12,6 +12,12 @@
     }
     &--gray {
       background-color: $gray;
+    }
+    &--bottomLarge {
+      padding-bottom: calc(#{$spaceLL}px + 60px);
+    }
+    &--bottomSmall {
+      padding-bottom: calc(#{$spaceLL}px - 60px);
     }
   }
 }

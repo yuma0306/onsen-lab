@@ -1,0 +1,66 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .answer {
+    display: grid;
+    row-gap: #{$spaceS}px;
+    justify-content: center;
+    &__heading {
+      position: relative;
+      width: fit-content;
+      margin-inline: auto;
+      padding: 5px 20px;
+      background-color: $primary;
+      color: $white;
+      font-weight: $fwBold;
+      text-align: center;
+      font-size: #{$fzLPC}px;
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        translate: -50% 100%;
+        width: 14px;
+        height: 10px;
+        background-color: $primary;
+        clip-path: polygon(0 0, 100% 0%, 50% 100%);
+        content: "";
+      }
+    }
+    &__body {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: #{$spaceS}px;
+    }
+    &__link {
+      display: block;
+      background-color: $primary02;
+      box-shadow: 0 0 4px $gray;
+      @include hoverOpacity();
+    }
+    &__name {
+      position: relative;
+      padding: 10px;
+      color: $primary;
+      font-weight: $fwBold;
+      text-align: center;
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        translate: 0 -50%;
+        width: 24px;
+        height: 24px;
+        background: url(/img/icon-arrow-right.png) no-repeat center / contain;
+        content: "";
+      }
+    }
+  }
+}
+
+@include sp {
+  .answer {
+  }
+}

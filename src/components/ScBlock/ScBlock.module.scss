@@ -1,0 +1,27 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .scBlock {
+    position: relative;
+    top: -60px;
+    padding: #{$spaceL}px #{$spaceSS}px;
+    background-color: $white;
+    border-radius: 16px;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 40px;
+      width: 80px;
+      height: 80px;
+      background: url(/img/icon-onsen2.svg) no-repeat center / contain;
+      content: '';
+    }
+  }
+}
+
+@include sp {
+  .scBlock {
+
+  }
+}
