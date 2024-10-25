@@ -1,0 +1,71 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: fit-content;
+    margin: auto;
+    &__link {
+      display: block;
+      width: 100%;
+      height: auto;
+      @include hoverOpacity();
+    }
+    &__close {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      translate: -50% -50%;
+      background: $white;
+      border-radius: 100vh;
+      z-index: 100;
+      @include hoverOpacity();
+    }
+    &__list {
+      min-width: #{$innerWidthPC}px;
+      max-height: 500px;
+      overflow-y: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 288px);
+      align-items: center;
+      justify-content: center;
+      gap: #{$spaceSS}px;
+      background-color: $white;
+      padding: #{$spaceM}px;
+      border-radius: 8px;
+    }
+    &__img {
+      width: 100%;
+      height: 188px;
+    }
+    &__text {
+      display: block;
+      text-align: center;
+      text-decoration: underline;
+      padding: 5px;
+    }
+  }
+  .overlay {
+    display: grid;
+    place-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@include sp {
+  .modal {
+
+  }
+}

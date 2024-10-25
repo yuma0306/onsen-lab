@@ -1,0 +1,55 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .bubble {
+    position: relative;
+    display: flex;
+    column-gap: #{$spaceM}px;
+    &:before {
+      display: block;
+      width: 80px;
+      height: 80px;
+      background: url(/img/icon-duck-yellow.png) no-repeat center / contain;
+      content: "";
+    }
+    &__text {
+      flex-grow: 1;
+      position: relative;
+      background-color: $yellow02;
+      padding: #{$spaceS}px;
+      border-radius: 8px;
+      border: 2px solid $yellow;
+      font-weight: $fwMedium;
+      &::before {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-color: $yellow;
+        clip-path: polygon(0 50%, 100% 0, 100% 100%);
+        translate: -100% 0;
+        content: "";
+      }
+      &::after {
+        position: absolute;
+        top: 22px;
+        left: 0;
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-color: $yellow02;
+        clip-path: polygon(0 50%, 100% 0, 100% 100%);
+        translate: -100% 0;
+        content: "";
+      }
+    }
+  }
+}
+
+@include sp {
+  .bubble {
+  }
+}

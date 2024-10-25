@@ -1,0 +1,28 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .areaBtn {
+    position: absolute;
+    display: block;
+    width: fit-content;
+    padding: #{$spaceSSS}px #{$spaceSS}px;
+    border-radius: 100vh;
+    background-color: $white;
+    border: 1px solid $gray;
+    font-weight: $fwMedium;
+    &--kantou {
+      top: 62%;
+      right: 20%;
+    }
+    &--touhoku {
+      top: 30%;
+      right: 8%;
+    }
+  }
+}
+
+@include sp {
+  .area {
+  }
+}

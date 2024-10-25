@@ -1,0 +1,11 @@
+{
+  "touhoku": {
+    "hoge": "ほげ温泉",
+    "huga": "ふが温泉"
+  },
+  "kantou": {
+    "kusatsu": "草津温泉",
+    "ikaho": "伊香保温泉",
+    "arima": "有馬温泉"
+  }
+}
