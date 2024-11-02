@@ -1,9 +1,4 @@
 /**
- * Next React
- */
-import Image from "next/image";
-import Link from "next/link";
-/**
  * Style
  */
 import styles from '@/components/Header/Header.module.scss';

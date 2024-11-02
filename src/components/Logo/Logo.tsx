@@ -8,11 +8,7 @@ import Link from "next/link";
  */
 import styles from '@/components/Logo/Logo.module.scss';
 
-interface Props {
-  addClass?: string;
-}
-
-export default function Logo({addClass = '' }: Props) {
+export default function Logo() {
   return (
     <Link href="/" className={styles.logo}>
       <Image
