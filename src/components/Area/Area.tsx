@@ -11,7 +11,7 @@ import Modal from '@/components/Modal/Modal';
 /**
  * style
  */
-import styles from '@/components/Area/Area.module.scss';
+import styles from './Area.module.scss';
 /**
  * Data
  */

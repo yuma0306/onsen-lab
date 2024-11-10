@@ -1,7 +1,6 @@
-import React from 'react';
 import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react'
-import Kv from '../src/components/Kv/Kv'
+import Kv from '@/components/Kv/Kv'
 
 describe('Kv', () => {
   it('renders a heading', () => {

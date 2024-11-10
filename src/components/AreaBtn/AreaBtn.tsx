@@ -1,7 +1,7 @@
 /**
  * style
  */
-import styles from '@/components/AreaBtn/AreaBtn.module.scss';
+import styles from './AreaBtn.module.scss';
 
 interface Props {
   data: string;
