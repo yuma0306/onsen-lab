@@ -1,7 +1,7 @@
 /**
  * styles
  */
-import styles from '@/components/Kv/Kv.module.scss';
+import styles from './Kv.module.scss';
 
 export default function Kv() {
   return (
