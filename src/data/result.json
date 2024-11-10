@@ -2,36 +2,64 @@
   {
     "id": 0,
     "name": "草津温泉",
-    "slug": "kusatsu"
+    "slug": "kusatsu",
+    "pref": {
+      "name": "群馬県",
+      "slug": "gunma"
+    }
   },
   {
     "id": 1,
     "name": "有馬温泉",
-    "slug": "arima"
+    "slug": "arima",
+    "pref": {
+      "name": "兵庫県",
+      "slug": "hyogo"
+    }
   },
   {
     "id": 2,
     "name": "伊香保温泉",
-    "slug": "ikaho"
+    "slug": "ikaho",
+    "pref": {
+      "name": "群馬県",
+      "slug": "gunma"
+    }
   },
   {
     "id": 3,
     "name": "城崎温泉",
-    "slug": "kinosaki"
+    "slug": "kinosaki",
+    "pref": {
+      "name": "兵庫県",
+      "slug": "hyogo"
+    }
   },
   {
     "id": 4,
     "name": "銀山温泉",
-    "slug": "ginzan"
+    "slug": "ginzan",
+    "pref": {
+      "name": "山形県",
+      "slug": "yamagata"
+    }
   },
   {
     "id": 5,
     "name": "黒川温泉",
-    "slug": "kurokawa"
+    "slug": "kurokawa",
+    "pref": {
+      "name": "熊本県",
+      "slug": "kumamoto"
+    }
   },
   {
     "id": 6,
     "name": "下呂温泉",
-    "slug": "gero"
+    "slug": "gero",
+    "pref": {
+      "name": "岐阜県",
+      "slug": "gifu"
+    }
   }
 ]

@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
  */
 import AreaBtn from '@/components/AreaBtn/AreaBtn';
 import Modal from '@/components/Modal/Modal';
+import Weather from "@/components/Weather/Weather";
 /**
  * style
  */
@@ -54,6 +55,7 @@ export default function Area() {
       />
       <AreaBtn data="kantou" onClick={handleClick} text="関東" />
       <AreaBtn data="touhoku" onClick={handleClick} text="北海道・東北" />
+      <Weather />
       {active && areaObj && (
         <Modal active={active} obj={areaObj} setActive={setActive} />
       )}
