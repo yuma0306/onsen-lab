@@ -10,7 +10,7 @@ import Sc from "@/components/Sc/Sc";
 import Inner from "@/components/Inner/Inner";
 import Header from '@/components/Header/Header';
 
-export default function Gallery() {
+export default function GalleryDetail() {
   return (
     <>
       <Head>
@@ -22,9 +22,9 @@ export default function Gallery() {
       </Head>
       <Wrapper>
         <Header />
-        <Sc bgColor="primary02" addClass="u-pt0">
+        <Sc>
           <Inner>
-            温泉診断ラボ
+            詳細ページ
           </Inner>
         </Sc>
       </Wrapper>

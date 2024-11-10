@@ -18,14 +18,14 @@ export default function Gallery() {
           width={288}
           height={188}
           text="下呂温泉"
-          href="/gero/"
+          href="/gallery/gero/"
         />
         <GalleryCard
           src="/img/img-ginzan.jpg"
           width={288}
           height={396}
           text="銀山温泉"
-          href="/ginzan/"
+          href="/gallery/ginzan/"
         />
       </div>
       <div className={styles.gallery__col}>
@@ -34,21 +34,21 @@ export default function Gallery() {
           width={288}
           height={188}
           text="草津温泉"
-          href="/kusatsu/"
+          href="/gallery/kusatsu/"
         />
         <GalleryCard
           src="/img/img-kinosaki.jpg"
           width={288}
           height={188}
           text="城崎温泉"
-          href="/kinosaki/"
+          href="/gallery/kinosaki/"
         />
         <GalleryCard
           src="/img/img-arima.jpg"
           width={288}
           height={188}
           text="有馬温泉"
-          href="/arima/"
+          href="/gallery/arima/"
         />
       </div>
       <div className={styles.gallery__col}>
@@ -57,14 +57,14 @@ export default function Gallery() {
           width={288}
           height={396}
           text="伊香保温泉"
-          href="/ikaho/"
+          href="/gallery/ikaho/"
         />
         <GalleryCard
           src="/img/img-kurokawa.jpg"
           width={288}
           height={396}
           text="黒川温泉"
-          href="/kurokawa/"
+          href="/gallery/kurokawa/"
         />
       </div>
     </div>

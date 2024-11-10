@@ -1,6 +1,3 @@
-/**
- * Types
- */
 export interface areaType {
   id: number;
   yes: {

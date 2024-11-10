@@ -24,6 +24,12 @@ export default function Footer() {
           <li className={styles.footer__item}>
             <Link className={styles.footer__link} href="/gallery/">温泉一覧</Link>
           </li>
+          <li className={styles.footer__item}>
+            <Link className={styles.footer__link} href="/st/tokyo/">東京Static</Link>
+          </li>
+          <li className={styles.footer__item}>
+            <Link className={styles.footer__link} href="/st/kanagawa/">神奈川Static</Link>
+          </li>
         </ul>
         <p className={styles.footer__copy}>&copy;&nbsp;温泉ラボ</p>
       </Inner>

@@ -1,6 +1,3 @@
-/**
- * Types
- */
 export interface QuestionType {
   id: number;
   text: string;
