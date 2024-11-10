@@ -10,7 +10,9 @@ export default function Weather() {
   const [weatherData, setWeatherData] = useState<null | weatherType>(null);
   // 都道府県の変更
   function handleChange(e: React.ChangeEvent<HTMLSelectElement>) {
-    e.target.value && setLocation(e.target.value);
+    if(e.target.value) {
+      setLocation(e.target.value);
+    }
   }
   // APIを叩いて天気を取得
   async function fetchWeather(pref: string) {
