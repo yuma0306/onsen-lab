@@ -25,10 +25,16 @@ export default function Footer() {
             <Link className={styles.footer__link} href="/gallery/">温泉一覧</Link>
           </li>
           <li className={styles.footer__item}>
-            <Link className={styles.footer__link} href="/st/tokyo/">東京Static</Link>
+            <Link className={styles.footer__link} href="/gsp/tokyo/">東京gsp（SSG）</Link>
           </li>
           <li className={styles.footer__item}>
-            <Link className={styles.footer__link} href="/st/kanagawa/">神奈川Static</Link>
+            <Link className={styles.footer__link} href="/gsp/kanagawa/">神奈川gsp（SSG）</Link>
+          </li>
+          <li className={styles.footer__item}>
+            <Link className={styles.footer__link} href="/gssp/tokyo/">東京gssp（SSR）</Link>
+          </li>
+          <li className={styles.footer__item}>
+            <Link className={styles.footer__link} href="/gssp/kanagawa/">神奈川gssp（SSR）</Link>
           </li>
         </ul>
         <p className={styles.footer__copy}>&copy;&nbsp;温泉ラボ</p>
