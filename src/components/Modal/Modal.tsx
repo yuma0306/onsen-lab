@@ -10,13 +10,13 @@ import styles from '@/components/Modal/Modal.module.scss';
 /**
  * Type
  */
-interface ModalProps {
+interface Props {
   active: boolean;
   obj: { [key: string]: string } | null;
   setActive: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export default function Modal({ active, obj, setActive }: ModalProps) {
+export default function Modal({ active, obj, setActive }: Props) {
   if (!active || !obj) {
     return null;
   }
@@ -38,8 +38,8 @@ export default function Modal({ active, obj, setActive }: ModalProps) {
         </button>
         <ul className={styles.modal__list}>
           {Object.entries(obj).map(([key, value], index) => (
-            <li className={styles.modal__item}>
-              <Link href={key} key={index} className={styles.modal__link}>
+            <li className={styles.modal__item} key={index}>
+              <Link href={key} className={styles.modal__link}>
                 <Image
                   src={`/img/img-${key}.jpg`}
                   alt={value}

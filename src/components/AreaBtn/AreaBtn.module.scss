@@ -11,6 +11,7 @@
     background-color: $white;
     border: 1px solid $gray;
     font-weight: $fwMedium;
+    @include hoverOpacity();
     &--kantou {
       top: 62%;
       right: 20%;

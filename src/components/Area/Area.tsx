@@ -11,13 +11,13 @@ import Modal from '@/components/Modal/Modal';
 /**
  * style
  */
-import styles from '@/components/Area/Area.module.scss';
+import styles from './Area.module.scss';
 /**
  * Data
  */
 import areaJson from '@/data/area.json';
 
-const areaData: {[key: string]: { [key: string]: string }} = areaJson;
+const areaData: {[key: string]: {[key: string]: string }} = areaJson;
 
 export default function Area() {
   const [active, setActive] = useState<boolean>(false);
@@ -33,7 +33,7 @@ export default function Area() {
 
   function handleClick(e: React.MouseEvent<HTMLButtonElement>) {
     if (active && areaObj) {
-      areaObj && setAreaObj(null);
+      setAreaObj(null);
       setActive(false);
     }
     const areaKey = e.currentTarget.getAttribute('data-area');
