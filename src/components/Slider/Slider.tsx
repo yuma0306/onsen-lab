@@ -2,13 +2,7 @@
  * React Next
  */
 import { useState } from 'react';
-import { useRouter } from 'next/router';
 import Image from 'next/image';
-import ErrorPage from 'next/error';
-/**
- * Data
- */
-import resultJson from '@/data/result.json';
 /**
  * Swiper
  * https://swiperjs.com/react
@@ -16,10 +10,6 @@ import resultJson from '@/data/result.json';
 import SwiperCore from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Thumbs } from 'swiper/modules';
-/**
- * Types
- */
-import { OnsenType } from '@/types/OnsenType';
 /**
  * Component
  */
@@ -30,20 +20,15 @@ import SlideNextButton from '@/components/SlideNextButton/SlideNextButton';
  */
 import 'swiper/scss';
 /**
- * Export
- * GetStaticPropsでパスに応じて、その温泉の画像を取得するようにする
+ * Types
  */
-export default function Slider() {
-  const resultData: OnsenType[] = resultJson;
+import { OnsenType } from '@/types/OnsenType';
+/**
+ * Export
+ */
+export default function Slider({ data }: { data: OnsenType }) {
+  // console.log(data);
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);
-  const router = useRouter();
-  const currentPath = router.asPath.split('/').filter(Boolean);
-  const lastPath = currentPath[currentPath.length - 1];
-  const data = resultData.find((d) => d.slug === lastPath);
-  if (!data) {
-    // 404ページを表示
-    return <ErrorPage statusCode={404} />;
-  }
   return (
     <>
       <h1>{data.name}</h1>
@@ -77,7 +62,7 @@ export default function Slider() {
       <Swiper
         modules={[Thumbs]}
         watchSlidesProgress
-        slidesPerView={data?.images.length}
+        slidesPerView={data.images.length}
         spaceBetween={10}
         onSwiper={setThumbsSwiper}
       >

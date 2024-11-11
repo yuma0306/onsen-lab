@@ -2,11 +2,6 @@ import { weatherType } from '@/types/weather';
 import { endpoint } from '@/constants/weather';
 import prefJson from '@/data/pref.json';
 import { GetStaticPropsContext } from 'next';
-
-interface PageProps {
-  weatherData: weatherType;
-}
-
 /**
  * getStaticPathsでprefJsonのキーを取得し、それぞれのキーをパスとして生成・定義
  * return 文が指定するデータは、Next.js が静的に生成するページのパスリスト
@@ -22,7 +17,6 @@ export async function getStaticPaths() {
     fallback: false
   };
 }
-
 /**
  * getStaticPropsでページごとの気象データを取得
  * context（next.jsが用意）には、getStaticPathsで指定したパスが含まれており、params.slugにアクセスすることで都道府県の識別子を取得
@@ -35,7 +29,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
   // 【オブジェクトの分割代入】contextオブジェクトからparamsプロパティだけを取り出して、新しい定数に割り当て
   const { params } = context;
   // 【オプショナルチェイニング】paramsがnullまたはundefined でなければ、params.slug にアクセスし、それ以外の場合は、undefinedを返す
-  // 【型アサーション】params?.slug が、string 型であることを TypeScript に断言
+  // 【型アサーション】params?.slug が、string 型であることをTypeScript に断言
   const slug = params?.slug as string;
   const apiUrl = `${endpoint}?q=${slug}&appid=${process.env.NEXT_PUBLIC_OPENWEATHERMAP_API_KEY}&lang=ja&units=metric`;
   const res = await fetch(apiUrl);
@@ -45,7 +39,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
   };
 }
 
-export default function WeatherPage({ weatherData }: PageProps) {
+export default function WeatherPage({ weatherData }: { weatherData: weatherType }) {
   return (
     <>
       {weatherData && weatherData.cod !== 401 ? (

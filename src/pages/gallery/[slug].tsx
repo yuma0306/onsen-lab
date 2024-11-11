@@ -2,6 +2,15 @@
  * Next React
  */
 import Head from 'next/head';
+import { GetStaticPropsContext } from 'next';
+/**
+ * Data
+ */
+import resultJson from '@/data/result.json';
+/**
+ * Types
+ */
+import { OnsenType } from '@/types/OnsenType';
 /**
  * Constants
  */
@@ -14,10 +23,53 @@ import Sc from '@/components/Sc/Sc';
 import Inner from '@/components/Inner/Inner';
 import Header from '@/components/Header/Header';
 import Slider from '@/components/Slider/Slider';
+import NotFound from '@/pages/404';
+/**
+ * 【getStaticPaths】
+ * getStaticPathsでsonのキーを取得し、それぞれのキーをパスとして生成・定義
+ * return 文が指定するデータは、Next.js が静的に生成するページのパスリスト
+ * このリストに基づいて、Next.js は各パスに対応するページを事前に生成する
+ * fallback: false は、getStaticPaths で定義されていないパスにアクセスした場合、404 ページを返す
+ */
+export async function getStaticPaths() {
+  const data: OnsenType[] = resultJson;
+  const paths = Object.entries(data).map(([key, value]) => (
+    { params: { slug: value.slug } }
+  ));
+  return {
+    paths,
+    fallback: false
+  };
+}
+/**
+ * 【getStaticProps】
+ * TypeScriptの場合は、GetStaticPropsContextを使って型を指定するのが一般的
+ * context（next.jsが用意）には、getStaticPathsで指定したパスが含まれている
+ * contextとは、Next.js が getStaticProps 関数に渡すオブジェクト。ページの生成に必要な情報を保持している
+ * ▼contextの中身。console（ターミナル）で確認可能
+ * {
+    params: { slug: 'ikaho' },
+    locales: undefined,
+    locale: undefined,
+    defaultLocale: undefined,
+    revalidateReason: 'stale'
+  }
+ */
+export async function getStaticProps(context: GetStaticPropsContext) {
+  // console.log(context);
+  // 【オブジェクトの分割代入】contextオブジェクトからparamsプロパティだけを取り出して、新しい定数に割り当て
+  const { params } = context;
+  const targetSlug = params?.slug as string;
+  const onsenData: OnsenType[] = resultJson;
+  const targetData = onsenData.find((d) => d.slug === targetSlug);
+  return {
+    props: { targetData }
+  };
+}
 /**
  * Export
  */
-export default function GalleryDetail() {
+export default function GalleryDetail({ targetData }: { targetData: OnsenType }) {
   return (
     <>
       <Head>
@@ -31,7 +83,9 @@ export default function GalleryDetail() {
         <Header />
         <Sc>
           <Inner>
-            <Slider />
+            <Slider
+              data={targetData}
+            />
           </Inner>
         </Sc>
       </Wrapper>
