@@ -23,7 +23,6 @@ import Sc from '@/components/Sc/Sc';
 import Inner from '@/components/Inner/Inner';
 import Header from '@/components/Header/Header';
 import Slider from '@/components/Slider/Slider';
-import NotFound from '@/pages/404';
 /**
  * 【getStaticPaths】
  * getStaticPathsでsonのキーを取得し、それぞれのキーをパスとして生成・定義
@@ -33,7 +32,7 @@ import NotFound from '@/pages/404';
  */
 export async function getStaticPaths() {
   const data: OnsenType[] = resultJson;
-  const paths = Object.entries(data).map(([key, value]) => (
+  const paths = data.map((value) => (
     { params: { slug: value.slug } }
   ));
   return {
