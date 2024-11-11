@@ -21,6 +21,7 @@
       border-radius: 8px;
       border: 2px solid $yellow;
       font-weight: $fwMedium;
+      text-shadow: 0 0 1px $gray;
       &::before {
         position: absolute;
         top: 20px;

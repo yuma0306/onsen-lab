@@ -6,7 +6,13 @@
     "pref": {
       "name": "群馬県",
       "slug": "gunma"
-    }
+    },
+    "images": [
+      "img-kusatsu.jpg",
+      "img-kusatsu02.jpg",
+      "img-kusatsu03.jpg"
+    ],
+    "desc": "草津温泉は、群馬県吾妻郡草津町にある温泉。日本三名泉の一つであり、日本最古の温泉とされる。"
   },
   {
     "id": 1,
@@ -15,7 +21,13 @@
     "pref": {
       "name": "兵庫県",
       "slug": "hyogo"
-    }
+    },
+    "images": [
+      "img-arima.jpg",
+      "img-arima02.jpg",
+      "img-arima03.jpg"
+    ],
+    "desc": "有馬温泉は、兵庫県神戸市北区有馬町にある温泉。日本三古湯の一つであり、日本最古の温泉とされる。"
   },
   {
     "id": 2,
@@ -24,7 +36,13 @@
     "pref": {
       "name": "群馬県",
       "slug": "gunma"
-    }
+    },
+    "images": [
+      "img-ikaho.jpg",
+      "img-ikaho02.jpg",
+      "img-ikaho03.jpg"
+    ],
+    "desc": ""
   },
   {
     "id": 3,
@@ -33,7 +51,13 @@
     "pref": {
       "name": "兵庫県",
       "slug": "hyogo"
-    }
+    },
+    "images": [
+      "img-kinosaki.jpg",
+      "img-kinosaki02.jpg",
+      "img-kinosaki03.jpg"
+    ],
+    "desc": ""
   },
   {
     "id": 4,
@@ -42,7 +66,13 @@
     "pref": {
       "name": "山形県",
       "slug": "yamagata"
-    }
+    },
+    "images": [
+      "img-ginzan.jpg",
+      "img-ginzan02.jpg",
+      "img-ginzan03.jpg"
+    ],
+    "desc": ""
   },
   {
     "id": 5,
@@ -51,7 +81,13 @@
     "pref": {
       "name": "熊本県",
       "slug": "kumamoto"
-    }
+    },
+    "images": [
+      "img-kurokawa.jpg",
+      "img-kurokawa02.jpg",
+      "img-kurokawa03.jpg"
+    ],
+    "desc": ""
   },
   {
     "id": 6,
@@ -60,6 +96,12 @@
     "pref": {
       "name": "岐阜県",
       "slug": "gifu"
-    }
+    },
+    "images": [
+      "img-gero.jpg",
+      "img-gero02.jpg",
+      "img-gero03.jpg"
+    ],
+    "desc": ""
   }
 ]
