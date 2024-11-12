@@ -3,12 +3,101 @@
 
 @include pc {
   .header {
+    $this: &;
     padding: 20px;
     background-color: $primary02;
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__menus {
+      display: flex;
+      align-items: center;
+    }
+    &__menu {
+      position: relative;
+      &:not(:last-of-type) {
+        &::after {
+          position: absolute;
+          top: 50%;
+          right: 0;
+          translate: 0 -50%;
+          content: '';
+          display: block;
+          width: 1px;
+          height: 24px;
+          background-color: $gray02;
+        }
+      }
+    }
+    &__link {
+      display: inline-block;
+      position: relative;
+      padding: 0 #{$spaceSS}px;
+      font-size: #{$fzSPC}px;
+      font-weight: $fwMedium;
+      @include hoverOpacity();
+    }
+    &__menuText {
+      display: inline-block;
+      padding: 0 #{$spaceSS}px;
+      font-size: #{$fzSPC}px;
+      font-weight: $fwMedium;
+      cursor: pointer;
+      @include hoverOpacity();
+    }
+  }
+  .burgerBtn {
+    display: none;
   }
 }
 
 @include sp {
   .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    padding: vw(20) 0;
+    background-color: $primary02;
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__block {
+      overflow: overlay;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: vw($spaceSS) 0 vw($spaceS);
+      background-color: $primary02;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.3s;
+      &--active {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+    &__menus {
+      display: grid;
+      padding: 0 vw(20);
+    }
+    &__menu {
+      position: relative;
+      padding: vw(10);
+      border-bottom: vw(1) solid $gray02;
+    }
+    &__link {
+      display: inline-block;
+      position: relative;
+      font-weight: $fwMedium;
+      @include hoverOpacity();
+    }
   }
 }

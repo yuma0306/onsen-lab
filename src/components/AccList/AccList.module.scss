@@ -1,0 +1,8 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .accList {
+    display: grid;
+  }
+}

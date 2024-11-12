@@ -4,6 +4,7 @@
 @include pc {
   .footer {
     padding: #{$spaceM}px 0;
+    background-color: $gray03;
     &__list {
       display: flex;
       align-items: center;

@@ -17,6 +17,7 @@ import HeadingLv2 from '@/components/HeadingLv2/HeadingLv2'
 import Bnr from "@/components/Bnr/Bnr";
 import Footer from "@/components/Footer/Footer";
 import Gallery from "@/components/Gallery/Gallery";
+import AccList from "@/components/AccList/AccList";
 
 export default function Home() {
   return (
@@ -49,6 +50,17 @@ export default function Home() {
           <Inner>
             <HeadingLv2>都道府県から温泉を探す</HeadingLv2>
             <Area />
+          </Inner>
+        </Sc>
+        <Sc>
+          <Inner>
+            <HeadingLv2>温泉豆知識</HeadingLv2>
+            <AccList
+              list = {[
+                {heading: '質問1', body: '回答1'},
+                {heading: '質問2', body: '回答2'},
+              ]}
+            />
           </Inner>
         </Sc>
         <Footer />
