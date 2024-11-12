@@ -9,6 +9,7 @@ interface Props {
   bottomLarge?: boolean;
   bottomSmall?: boolean;
   addClass?: string;
+  ref?: React.RefObject<HTMLDivElement>;
 }
 
 export default function Sc({ children, addClass = '', bgColor, bottomLarge, bottomSmall} : Props) {
