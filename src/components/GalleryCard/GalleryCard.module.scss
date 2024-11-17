@@ -6,6 +6,9 @@
     align-self: start;
     position: relative;
     display: grid;
+    img {
+      width: 100%;
+    }
     @each $span in (1, 2) {
       &--colSpan-#{$span} {
         grid-column: span #{$span};
