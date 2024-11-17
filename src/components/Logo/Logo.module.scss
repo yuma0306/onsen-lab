@@ -5,6 +5,8 @@
   .logo {
     display: inline-block;
     @include hoverOpacity();
+    position: relative;
+    z-index: 100;
   }
 }
 
@@ -12,5 +14,12 @@
   .logo {
     display: inline-block;
     @include hoverOpacity();
+    position: relative;
+    z-index: 100;
+    width: vw(140);
+    height: vw(36);
+    img {
+      width: 100%;
+    }
   }
 }

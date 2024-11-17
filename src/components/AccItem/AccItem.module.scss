@@ -1,0 +1,22 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .accItem {
+    $this: &;
+    &__heading {
+      display: flex;
+    }
+    &__body {
+      visibility: hidden;
+      opacity: 0;
+      transition: visivity 0.3s, height 0.3s, opacity 0.3s;
+    }
+    &--active {
+      #{$this}__body {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -44,7 +44,7 @@ export async function getStaticPaths() {
  * 【getStaticProps】
  * TypeScriptの場合は、GetStaticPropsContextを使って型を指定するのが一般的
  * context（next.jsが用意）には、getStaticPathsで指定したパスが含まれている
- * contextとは、Next.js が getStaticProps 関数に渡すオブジェクト。ページの生成に必要な情報を保持している
+ * contextとは、Next.js が getStaticProps関数に渡すオブジェクト
  * ▼contextの中身。console（ターミナル）で確認可能
  * {
     params: { slug: 'ikaho' },
@@ -58,6 +58,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
   // console.log(context);
   // 【オブジェクトの分割代入】contextオブジェクトからparamsプロパティだけを取り出して、新しい定数に割り当て
   const { params } = context;
+  console.log(params);
   const targetSlug = params?.slug as string;
   const onsenData: OnsenType[] = resultJson;
   const targetData = onsenData.find((d) => d.slug === targetSlug);

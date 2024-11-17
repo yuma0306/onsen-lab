@@ -39,7 +39,7 @@ export default function Modal({ active, obj, setActive }: Props) {
         <ul className={styles.modal__list}>
           {Object.entries(obj).map(([key, value], index) => (
             <li className={styles.modal__item} key={index}>
-              <Link href={key} className={styles.modal__link}>
+              <Link href={`/gallery/${key}`} className={styles.modal__link}>
                 <Image
                   src={`/img/img-${key}.jpg`}
                   alt={value}

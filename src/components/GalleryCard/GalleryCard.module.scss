@@ -3,8 +3,17 @@
 
 @include pc {
   .galleryCard {
-    display: block;
+    align-self: start;
     position: relative;
+    display: grid;
+    @each $span in (1, 2) {
+      &--colSpan-#{$span} {
+        grid-column: span #{$span};
+      }
+      &--rowSpan-#{$span} {
+        grid-row: span #{$span};
+      }
+    }
     &__modal {
       position: absolute;
       top: 0;
