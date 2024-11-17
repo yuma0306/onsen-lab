@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template: [hoge] auto [huga] auto [piyo] auto / 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px 24px;
+    }
+    .item {
+      /*グリットアイテムを3グリット分の大きさにする*/
+      grid-row: span 3;
+      /*サブグリットの指定*/
+      display: grid;
+      grid-template-rows: subgrid;
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">
+      <p class="subItem">吾輩は猫である</p>
+      <p class="subItem">吾輩は猫である。<br>名前はまだ無い。</p>
+      <p class="subItem">...</p>
+    </div>
+    <div class="item">
+      <p class="subItem">羅生門</p>
+      <p class="subItem">ある日の暮方の事である。<br>一人の下人が、羅生門の下で雨やみを待っていた。</p>
+      <p class="subItem">...</p>
+    </div>
+    <div class="item">
+      <p class="subItem">記憶に残る正月の思い出</p>
+      <p class="subItem">...</p>
+      <p class="subItem">宮本 百合子</p>
+    </div>
+  </div>
+</body>
+</html>

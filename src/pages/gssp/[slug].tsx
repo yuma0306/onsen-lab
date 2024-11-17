@@ -1,6 +1,6 @@
 import { weatherType } from '@/types/weather';
 import { endpoint } from '@/constants/weather';
-import { GetServerSidePropsContext } from 'next';
+import { GetServerSidePropsContext, GetServerSidePropsResult } from 'next';
 
 interface PageProps {
   weatherData: weatherType;
@@ -11,7 +11,7 @@ interface PageProps {
  * contextオブジェクトにはリクエスト情報が含まれており、params.slugにアクセスすることで都道府県の識別子を取得
  * default functionに、props（気象情報のデータ）を返す
  */
-export async function getServerSideProps(context: GetServerSidePropsContext) {
+export const getServerSideProps = async (context: GetServerSidePropsContext): Promise<GetServerSidePropsResult<{ [key: string]: weatherType }>> => {
   console.log(context);
   // contextオブジェクトからparamsプロパティだけを取り出して、新しい定数に割り当て
   const { params } = context;
@@ -23,7 +23,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
   return {
     props: { weatherData }
   };
-}
+};
 
 export default function WeatherPage({ weatherData }: PageProps) {
   return (

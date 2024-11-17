@@ -17,9 +17,11 @@ interface Props {
   height: number;
   text: string;
   href: string;
+  colSpan?: number;
+  rowSpan?: number;
 }
 
-export default function GalleryCard({ src, width, height, text, href }: Props ) {
+export default function GalleryCard({ src, width, height, text, href, colSpan = 1, rowSpan = 1, }: Props ) {
   const [modal, setModal] = useState<boolean>(false);
   const handleMouseEnter = () => {
     setModal(true);
@@ -28,7 +30,7 @@ export default function GalleryCard({ src, width, height, text, href }: Props ) 
     setModal(false);
   }
   return (
-    <Link href={href} className={styles.galleryCard} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <Link href={href} className={`${styles.galleryCard} ${styles[`galleryCard--colSpan-${colSpan}`]} ${styles[`galleryCard--rowSpan-${rowSpan}`]}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <div className={modal ? `${styles.galleryCard__modal} ${styles['galleryCard__modal--active']}` : styles.galleryCard__modal} data-testid="gallery-card">
         {text}
       </div>
