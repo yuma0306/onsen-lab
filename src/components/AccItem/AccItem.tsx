@@ -18,7 +18,9 @@ export default function AccItem({ heading, body, index }: Props) {
   const refBody = useRef<HTMLDListElement>(null);
   // 初回レンダリング。一番最初の要素だけ開く
   useEffect(() => {
-    index === 0 && setIsActive(true);
+    if(!index) {
+      setIsActive(true);
+    }
   }, []);
   const hancleClick = () => {
     setIsActive(!isActive);
