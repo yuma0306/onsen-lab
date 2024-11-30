@@ -22,14 +22,12 @@ const Component: React.FC<{ type: number, space: number, count: number }> = ({
         console.log('slide changed')
       },
       optionsChanged(instance) {
-        console.log('options changed')
         instance.update()
       },
-      created(instance) {
-        console.log(instance);
+      created() {
         console.log('created')
       },
-      updated(instance) {
+      updated() {
         console.log('updated')
       },
       // detailsChanged(instance) {
