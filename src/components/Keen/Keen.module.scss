@@ -1,0 +1,16 @@
+@use '../../styles/global/import' as *;
+@use '../../styles/config/import' as *;
+
+@include pc {
+  .keen {
+    &__item {
+      height: 300px;
+      background-color: $gray;
+    }
+  }
+}
+
+@include sp {
+  .keen {
+  }
+}

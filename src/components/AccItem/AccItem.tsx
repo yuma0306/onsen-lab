@@ -36,7 +36,7 @@ export default function AccItem({ heading, body, index }: Props) {
           className={styles.accItem__body}
           ref={refBody}
           style={{
-            height: isActive && refBody.current ? `${refBody.current.scrollHeight}px` : '0px',
+            height: isActive && refBody.current ? `${refBody.current.scrollHeight}px` : '0',
           }}
         >
           {body}
